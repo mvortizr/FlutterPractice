@@ -33,8 +33,24 @@ class ContactProfilePage extends StatelessWidget {
             ),
           ],
         ),
-        body: Container(
-          color: Colors.green
+        body: ListView(
+          children: <Widget>[
+            Column(
+              children: <Widget>[
+                //Container for adding Profile picture
+                Container(
+                  //Container is stretched horizontaly
+                  width: double.infinity,
+                  //Image is fetched from url
+                  child: Image.network(
+                    "https://github.com/ptyagicodecamp/educative_flutter/raw/profile_1/assets/profile.jpg?raw=true",
+                    height: 250,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );
